@@ -1,0 +1,25 @@
+/* ------- Site elements ------- */
+.sectionTitle {
+    padding-bottom: 5rem;
+    font-size: 3rem;
+    font-weight: 400;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        color: inherit;
+    }
+}
+
+.tableWrapper {
+	overflow: auto;
+
+	table {
+		min-width: 60rem;
+	}
+}

@@ -1,0 +1,58 @@
+/* ------- Buttons ------- */
+
+button,
+.button {
+	appearance: none;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	box-shadow: none;
+	background-color: transparent;
+	cursor: pointer;
+	user-select: none;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0 3rem;
+	width: fit-content;
+	height: 5rem;
+	border-radius: $radius;
+	box-shadow: none;
+	font-family: $base-font-family;
+	font-weight: 400;
+	font-size: $base-font-size;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: $primary;
+	transition: $duration background, $duration color, $duration border-color, $duration box-shadow;
+
+	&_fill {
+		width: 100%;
+	}
+
+	&_center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&:hover {
+		background: lighten($primary, 10%);
+  	}
+
+	@include disabled {
+		color: $white;
+		background: $disabled-background;
+		cursor: default;
+
+		&:hover {
+			color: $white;
+			background: $disabled-background;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="homeSection">
+	<div class="container">
+		<div class="homeSection__content">
+			<div class="homeSection__title">
+				{title ? <h1>{title}</h1> : 'Заголовок'}
+			</div>
+		</div>
+	</div>
+</section>

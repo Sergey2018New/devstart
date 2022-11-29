@@ -1,0 +1,61 @@
+/* ------- Form ------- */
+
+input {
+	&::-ms-clear {
+		display: none;
+	}
+}
+
+.formInput {
+	appearance: none;
+	display: block;
+	box-shadow: none;
+	border: 1px solid $input-border;
+	border-radius: $radius;
+	outline: none;
+	padding: 0 1.5rem;
+	width: 100%;
+	height: 5rem;
+	font-family: $font-primary;
+	font-size: $font-size-normal;
+	text-align: left;
+	color: $base-color;
+	background: $white;
+	transition: $duration background-color, $duration color, $duration border-color, $duration box-shadow;
+
+	&::placeholder {
+	  color: $placeholder;
+	  transition: $duration color;
+	}
+
+	&:focus {
+		border-color: $dark;
+	}
+
+	@include disabled {
+		color: $disabled-color;
+		background-color: $disabled-background;
+	}
+
+	@include error {
+		border-color: $error;
+	}
+}
+
+.formTextarea {
+	padding: 1.5rem; 
+	height: auto;
+	resize: none;
+}
+
+.form {
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2rem;
+
+		&_auto {
+			grid-template-columns: auto;
+		}
+	}
+}

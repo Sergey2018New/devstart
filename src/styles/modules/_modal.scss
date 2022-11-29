@@ -1,0 +1,96 @@
+/* ------- Modal -------- */
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	width: 100%;
+	height: calc(var(--vh, 1%) * 100);
+	overflow: hidden;
+    overflow-y: auto;
+	visibility: hidden;
+	opacity: 0;
+	background: $overlay;
+	transition: 0.4s opacity, 0.4s visibility;
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 4rem;
+		height: 4rem;
+		background: transparent;
+
+		svg {
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			fill: $dark;
+			transition: $duration fill;
+		}
+
+		&:hover {
+			svg {
+				fill: lighten($primary, 10%);
+			}
+		}
+	}
+ 
+	&__wrap {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		flex-grow: 0;
+		margin: auto;
+		padding: 0 $gutters;
+		width: 100%;
+		min-height: 100%;
+
+		@include media(pc) {
+			padding-left: $gutters-tablet;
+			padding-right: $gutters-tablet;
+		}
+
+		@include media(mob) {
+			padding-left: $gutters-mobile;
+			padding-right: $gutters-mobile;
+		}
+	}
+
+	&__window {
+		position: relative;
+		flex-shrink: 0;
+		flex-grow: 0;
+		margin: 4rem 0;
+		padding: 5rem 3rem;
+		width: 60rem;
+		max-width: 100%;
+		background: $white;
+
+		@include media(mob) {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__title {
+		margin: 0 0 2rem;
+		font-size: 2.4rem;
+		font-weight: 700;
+	}
+
+	&.is-active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.is-modal-active {
+	overflow: hidden;
+	touch-action: none;
+}

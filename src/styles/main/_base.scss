@@ -1,0 +1,138 @@
+/* ------- Base ------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	height: 100%;
+	font-size: 62.5%;
+	background: $base-background;
+}
+
+body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-decoration-skip: objects;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: $base-color;
+}
+
+p {
+	margin: 0 0 1.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $link;
+	transition: color $duration;
+}
+
+img {
+	max-width: 100%;
+} 
+
+hr {
+	margin: 2rem 0;
+	border: none;
+	border-bottom: 1px solid $grey;
+	height: 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+
+	th, td {
+		padding: 1rem;
+		border-style: solid;
+		border-width: 0 1px 1px 0;
+		border-color: white;
+	}
+
+	th {
+		background: #ddd;
+	}
+
+	td {
+		background: #f0f0f0;
+	}
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1 0 auto;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 $gutters;
+	width: 100%;
+	max-width: $container + $gutters * 2;
+
+	@include media(pc) {
+		padding-left: $gutters-tablet;
+		padding-right: $gutters-tablet;
+	}
+
+	@include media(mob) {
+		padding-left: $gutters-mobile;
+		padding-right: $gutters-mobile;
+	}
+
+	&_fluid {
+		max-width: none;
+	}
+}
+
+.anim {
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s transform, 1s opacity, 1s visibility;
+
+	&.is-active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.site-pages {
+	padding: 5rem 0;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				color: blue;
+			}
+		}
+	}
+}

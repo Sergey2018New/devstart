@@ -1,0 +1,63 @@
+/* ------- Header ------- */
+.logo{
+	display: block;
+	width: $logo-width; 
+	height: $logo-height;
+ 
+	&__img {
+		display: block;
+		width: 100%; 
+		height: 100%;
+	}
+}
+
+.header {
+	position: relative;
+	z-index: 100;
+	flex-shrink: 0;
+	width: 100%;
+	height: $header;
+
+	@include media(tab) {
+		height: $header-tablet;
+	}
+
+	@include media(mob) {
+		height: $header-mobile;
+	}
+
+	&__inner {
+		height: $header;
+		background: $black;
+
+		@include media(tab) {
+			height: $header-tablet;
+		}
+
+		@include media(mob) {
+			height: $header-mobile;
+		}
+	}
+
+	&__container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		height: 100%;
+	}
+
+	&__right {
+		margin-left: auto;
+	}
+
+	&.is-fixed {
+		.header__inner {
+			position: fixed;
+			z-index: 100;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+}

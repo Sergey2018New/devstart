@@ -1,0 +1,75 @@
+// Base
+$base-font-family: "Roboto", "Arial", sans-serif;
+$base-font-weight: 400;
+$base-font-size: 1.6rem;
+$base-line-height: 1.5;
+$base-color: #000;
+$base-background: #fff;
+
+// Fonts
+$font-primary: $base-font-family;
+ 
+// Font sizes
+$font-size-normal: $base-font-size;
+
+// Colors
+$primary: #33a;
+$second: #a3a;
+$black: #000;
+$white: #fff;
+$grey: #999;
+$dark: #333;
+$light: #eee;
+$input-border: #ddd;
+$placeholder: #999;
+$disabled-color: #aaa;
+$disabled-background: #aaa;
+$error: #c00;
+$success: #090;
+$link: inherit;
+
+// Container
+$container: 124rem;
+$min-width: 320px;
+$gutters: 3rem;
+$gutters-tablet: 2rem;
+$gutters-mobile: 1.5rem;
+$padding: 12rem;
+$padding-tablet: 8rem;
+$padding-mobile: 6rem;
+
+// Breakpoints
+$grid-breakpoints: (
+	mob-xxs: 375px,
+	mob-xs: 420px,
+	mob-sm: 480px,
+	mob-m: 576px,
+	mob: 768px,
+	tab: 992px,
+	tab-l: 1024px,
+	pc: 1200px,
+	netbook: 1340px,
+	pc-l: 1440px, 
+	pc-md: 1600px,
+	pc-xl: 1680px,
+	pc-xxl: 1920px
+);
+
+// Header
+$header: 10rem;
+$header-tablet: 8rem;
+$header-mobile: 7rem;
+
+// Logo
+$logo-width: 10rem;
+$logo-height: 4rem;
+
+// Animation
+$duration: 0.3s;
+$duration-lazy: 0.6s;
+
+// Other
+$radius: 1rem;
+$overlay-opacity: 0.7;
+$overlay-background: $black;
+$overlay: rgba($overlay-background, $overlay-opacity);

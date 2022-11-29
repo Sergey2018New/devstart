@@ -1,0 +1,21 @@
+/* ------- homeSection -------- */
+.homeSection {
+	padding: 10rem 0;
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+
+        @include media(mob) {
+            font-size: 2rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            color: inherit;
+        }
+    }
+}
